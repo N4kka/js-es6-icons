@@ -112,3 +112,18 @@ const fontIcons = [
 		color: 'blue'
 	}
 ];
+
+const newElement = fontIcons.forEach( (element) => {
+    const newDiv = document.createElement("div");
+    newDiv.classList.add("box-icons");
+    document.getElementById("wrapper").appendChild(newDiv);
+    newDiv.innerHTML += `<i class="${element.family} ${element.prefix}${element.name}"></i>`
+    newDiv.style.color = `${element.color}`;
+    newDiv.classList.add("text-align");
+    newDiv.style.fontSize = "35px";
+    newParagraph = document.createElement("p");
+    newParagraph.innerHTML += `${element.name.toUpperCase()}`;
+    newDiv.appendChild(newParagraph);
+    newParagraph.style.color = "black";
+    newParagraph.style.fontSize = "15px";
+});
