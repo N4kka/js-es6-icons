@@ -127,3 +127,12 @@ const newElement = fontIcons.forEach( (element) => {
     newParagraph.style.color = "black";
     newParagraph.style.fontSize = "15px";
 });
+
+const iconSelect = fontIcons.filter( (element) => {
+    const iconSelected = document.getElementById("icon-select");
+    if(element.type === "Animals") {
+        const selectedValue = iconSelected.value; 
+        selectedValue.innerHTML += `${element.family} ${element.prefix}${element.name}`;
+    }
+    console.log(iconSelected);
+});
